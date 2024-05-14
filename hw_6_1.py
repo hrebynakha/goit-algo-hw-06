@@ -115,14 +115,14 @@ comutate_objects(net_routers[:1],local_comutators[0], 5)
 comutate_objects(net_routers[1:3],local_comutators[0], 9)
 
 comutate_objects(net_routers[:1],local_comutators[1], 4)
-comutate_objects(net_routers[1:3],local_comutators[1], 1)
+comutate_objects(net_routers[1:3],local_comutators[1], 2)
 
 group_elements([local_comutators[0]], pos_y=3, x_from=10)
 group_elements([local_comutators[1]], pos_y=3, x_from=15)
 
 # comutating routers to comutators of fabric
 comutate_objects(net_routers[3:3],local_comutators[2], 5)
-comutate_objects(net_routers[3:],local_comutators[2], 9)
+comutate_objects(net_routers[3:],local_comutators[2], 4)
 
 comutate_objects(net_routers[3:3],local_comutators[3], 4)
 comutate_objects(net_routers[3:],local_comutators[3], 1)
@@ -132,18 +132,18 @@ group_elements([local_comutators[3]], pos_y=3, x_from=40)
 
 
 # comutate office and factory  with dc comutators 
-comutate_objects(local_comutators, dc_comutators[0], 1)
+comutate_objects(local_comutators, dc_comutators[0], 3)
 group_elements([dc_comutators[0]], pos_y=6, x_from=10)
 
-comutate_objects(local_comutators, dc_comutators[1], 9)
+comutate_objects(local_comutators, dc_comutators[1], 1)
 group_elements([dc_comutators[1]], pos_y=6, x_from=23)
 
-comutate_objects(local_comutators, dc_comutators[2], 9)
+comutate_objects(local_comutators, dc_comutators[2], 2)
 group_elements([dc_comutators[2]], pos_y=6, x_from=40)
 
 # comutate dc comutator to inet comutator
 comutate_objects(dc_comutators[:1], inet_comutator[0], 1)
-comutate_objects(dc_comutators[1:2], inet_comutator[0], 2)
+comutate_objects(dc_comutators[1:2], inet_comutator[0], 9)
 comutate_objects(dc_comutators[2:], inet_comutator[0], 3)
 if __name__ == "__main__":
     links = G.number_of_edges()
